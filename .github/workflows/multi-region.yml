@@ -1,0 +1,27 @@
+name: "🌍 Multi-Region"
+on: workflow_dispatch:
+jobs:
+  vps-us:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+  vps-eu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+  vps-asia:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330

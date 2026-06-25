@@ -1,0 +1,203 @@
+name: "⚡ MAX POWER - 20 Nodes"
+on: workflow_dispatch:
+
+  node-1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-4:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-5:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-6:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-7:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-8:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-9:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-10:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-11:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-12:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-13:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-14:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-15:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-16:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-17:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-18:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-19:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+
+  node-20:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y python3 git curl tmux htop neofetch rclone
+      - uses: mxschmitt/action-tmate@v3
+        with: { sudo: true, limit-access-to-actor: false }
+        timeout-minutes: 330
+

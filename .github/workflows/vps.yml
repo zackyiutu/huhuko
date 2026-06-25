@@ -1,0 +1,40 @@
+name: "🚀 Free VPS Server"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */5 * * *'
+concurrency:
+  group: vps-server
+  cancel-in-progress: true
+jobs:
+  vps:
+    runs-on: ubuntu-latest
+    timeout-minutes: 335
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install
+        run: |
+          sudo apt update -y
+          sudo apt install -y python3 python3-pip git curl wget tmux htop neofetch nano vim build-essential cmake nodejs npm screen mc ncdu net-tools dnsutils zip unzip rclone
+      - name: GDrive
+        run: |
+          if [ -n "${{ secrets.GDRIVE_SA_JSON }}" ]; then
+            echo "${{ secrets.GDRIVE_SA_JSON }}" > /tmp/sa.json
+            mkdir -p ~/.config/rclone
+            echo -e "[gdrive]\ntype = drive\nscope = drive\nservice_account_file = /tmp/sa.json" > ~/.config/rclone/rclone.conf
+            sudo mkdir -p /mnt/gdrive
+            rclone mount gdrive: /mnt/gdrive --daemon --vfs-cache-mode full 2>/dev/null || true
+            sleep 2
+            if rclone lsd gdrive:vps-backup 2>/dev/null; then
+              mkdir -p ~/vps-backup
+              rclone sync gdrive:vps-backup ~/vps-backup --quiet 2>/dev/null || true
+              [ -d ~/vps-backup/home ] && rsync -a ~/vps-backup/home/ ~/ 2>/dev/null || true
+              [ -f ~/vps-backup/pip-packages.txt ] && pip install -r ~/vps-backup/pip-packages.txt 2>/dev/null || true
+            fi
+          fi
+      - name: SSH
+        uses: mxschmitt/action-tmate@v3
+        with:
+          sudo: true
+          limit-access-to-actor: false
+        timeout-minutes: 330

@@ -1,0 +1,21 @@
+name: "🔄 24/7 Keep-Alive"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */5 * * *'
+jobs:
+  keep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              await github.rest.actions.createWorkflowDispatch({
+                owner: context.repo.owner, repo: context.repo.repo,
+                workflow_id: 'vps.yml', ref: 'main',
+              });
+              console.log('triggered');
+            } catch(e) { console.log(e.message); }
